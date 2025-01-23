@@ -1,0 +1,11 @@
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ netstat -rn                                         
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG        0 0          0 eth0
+192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 eth0
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ netstat -rn | awk 'match($2,/\./) {print $2}' | sort
+0.0.0.0
+192.168.1.1

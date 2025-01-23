@@ -1,0 +1,57 @@
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ touch config.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ vi config.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ cat config.txt
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+</configuration>
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///localhost/hadoop/hadoopdata/hdfs/namenode</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///localhost/hadoop/hadoopdata/hdfs/datanode</value>
+    </property>
+ </configuration>
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ touch updated_config.txt  
+
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt 
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module2]
+└─$ cat updated_config.txt                                       
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://127.0.0.1:9000</value>
+    </property>
+</configuration>
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///127.0.0.1/hadoop/hadoopdata/hdfs/namenode</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///127.0.0.1/hadoop/hadoopdata/hdfs/datanode</value>
+    </property>
+ </configuration>
