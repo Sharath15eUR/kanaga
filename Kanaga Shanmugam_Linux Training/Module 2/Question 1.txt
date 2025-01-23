@@ -52,3 +52,6 @@ drwxr-xr-x  5 kali kali 4.0K Mar  4  2024  Questions
 └─$ ls -lh | awk 'match($5,/M/) {if($5>1) print $0}'
 -rw-r--r--  1 kali kali  12M Mar  2  2024 traffic.pcap
 -rw-r--r--  1 kali kali 3.8M Mar  4  2024  wkwkwk.jpg
+
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls -lh | awk 'match($5,/M/) {if($5>1) print $0}' > ~/linux_training/module2/question1
