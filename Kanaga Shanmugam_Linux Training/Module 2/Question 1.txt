@@ -1,1 +1,53 @@
-
+──(kali㉿kali)-[~/Downloads]
+└─$ ls -lh                                          
+total 20M
+-rwxr-xr-x  1 kali kali  15K Feb 14  2024  0x41haz.0x41haz
+-rw-r--r--  1 kali kali  16K Mar  1  2024  0xlivin
+-rw-r--r--  1 kali kali  62K Mar  1  2024  0xlivin.exe
+-rwxr-xr-x  1 kali kali  15K Mar  4  2024  bl33d1ng
+-rw-r--r--  1 kali kali  20K Mar  2  2024  b.png
+-rwxr-xr-x  1 kali kali  17K Mar  5  2024  broken_elf
+-rw-r--r--  1 kali kali 7.2K Mar  1  2024  chall2.jpeg
+-rw-r--r--  1 kali kali 1.3K Mar  5  2024  communications.log
+-rwxr-xr-x  1 kali kali  16K Feb 14  2024  Compiled.Compiled
+-rwxr-xr-x  1 kali kali  36K Feb  7  2024  CONFIDENTIAL.pdf
+-rwxr-xr-x  1 kali kali 7.1K Feb 14  2024  crackme1
+-rwxr-xr-x  1 kali kali 5.8K Feb 14  2024  crackme2
+-rwxr-xr-x  1 kali kali 9.5K Feb 14  2024  crackme3
+-rwxr-xr-x  1 kali kali 8.6K Feb 14  2024  crackme4
+-rwxr-xr-x  1 kali kali 8.8K Feb 14  2024  crackme5
+-rwxr-xr-x  1 kali kali 8.5K Feb 14  2024  crackme6
+-rwxr-xr-x  1 kali kali 6.3K Feb 14  2024  crackme7
+-rwxr-xr-x  1 kali kali 5.8K Feb 14  2024  crackme8
+-rw-r--r--  1 kali kali  27K Mar  4  2024  Crypto.zip
+-rw-r--r--  1 kali kali 1.6K Feb 14  2024  detect_english.py
+-rw-r--r--  1 kali kali 444K Feb 14  2024  dictionary.txt
+-rwxr-xr-x  1 kali kali  16K Mar  5  2024  encoded
+-rw-r--r--  1 kali kali  953 Feb 14  2024  encrypted-text.txt
+-rw-r--r--  1 kali kali   24 Mar  1  2024  flag.txt
+-rwxr-xr-x  1 kali kali 885K Mar  4  2024  guess
+-rwxr-xr-x  1 kali kali  17K Mar  1  2024  hi
+-rw-r--r--  1 kali kali 2.6K Mar  1  2024  id_rsa.xt
+-rwxr-xr-x  1 kali kali  17K Mar  1  2024  infant
+-rwxr-xr-x  1 kali kali 4.4K Mar  1  2024  lucif
+-rw-r--r--  1 kali kali 1.4K Mar  4  2024  message.html
+-rw-r--r--  1 kali kali   22 Mar  4  2024  message.txt
+-rw-r--r--  1 kali kali  50K Mar  1  2024 'morse2(1).wav'
+-rw-r--r--  1 kali kali  50K Mar  1  2024  morse2.wav
+drwxr-xr-x 13 kali kali 4.0K Mar  5  2024  passwords.Hack3rM4n
+-rw-r--r--  1 kali kali 868K Mar  4  2024  passwords.Hack3rM4n.gasp
+-rw-r--r--  1 kali kali  16K Mar  1  2024  pwn1
+drwxr-xr-x  5 kali kali 4.0K Mar  4  2024  Questions
+-rwxr-xr-x  1 kali kali  16K Mar  4  2024  reverse.reverse
+-rw-r--r--  1 kali kali 703K Mar  4  2024  Stego.zip
+-rw-r--r--  1 kali kali  854 Mar  1  2024  task.txt
+-rw-r--r--  1 kali kali 8.5K Mar  1  2024  test8.txt
+-rw-r--r--  1 kali kali  12M Mar  2  2024  traffic.pcapng
+-rw-r--r--  1 kali kali  270 Feb 14  2024  transposition_encrypt.py
+-rw-r--r--  1 kali kali 3.8M Mar  4  2024  wkwkwk.jpg
+-rwxr-xr-x  1 kali kali  16K Mar  5  2024  working_elf
+-rw-r--r--  1 kali kali  31K Mar  1  2024  zipper.zip
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls -lh | awk 'match($5,/M/) {if($5>1) print $0}'
+-rw-r--r--  1 kali kali  12M Mar  2  2024 traffic.pcap
