@@ -1,0 +1,35 @@
+kali@kali:~/linux_training/module1
+$ mkdir dir1
+
+kali@kali:~/linux_training/module1
+$ cd dir1
+
+kali@kali:~/linux_training/module1/dir1
+$ mkdir dir2
+
+kali@kali:~/linux_training/module1/dir1
+$ cd dir2
+
+kali@kali:~/linux_training/module1/dir1/dir2
+$ touch sample
+
+kali@kali:~/linux_training/module1/dir1/dir2
+$ cd ..
+
+kali@kali:~/linux_training/module1/dir1
+$ touch sample1
+
+kali@kali:~/linux_training/module1/dir1
+$ cd dir2
+
+kali@kali:~/linux_training/module1/dir1/dir2
+$ ln -s ../sample1 softlink
+ln: failed to create symbolic link '/home/kali/linux_training/module1/dir1/sample1': File exists
+
+kali@kali:~/linux_training/module1/dir1/dir2
+$ ln -s ~/Linux_training/module1/dir1/dir2/softlink ~/linux_training/module1/dir1/sample
+
+kali@kali:~/linux_training/module1/dir1/dir2
+@ls -l ~/Linux_training/module1/dir1/dir2/softlink ~/linux_training/module1/dir1/sample
+-rw-r-- 1 kali kali 0 Jan 21 08:54 /home/kali/linux_training/modulel/dir1/dir2/softlink 
+lrwxrwxrwx 1 kali kali 52 Jan 21 08:57 /home/kali/Linus_training/nodule1/dir/sample -> /home/kali/linux_training/module1/dir1/dir2/softlink
