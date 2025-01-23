@@ -65,10 +65,10 @@ The `ls` command lists existing files in directory _dir1_ and using the __pipe(|
 ```
 $ ls | sort
 ```
-The contents of this command can be stored in a file using the __redirection(>) mechanism__ and the contents of the file can be viewed using `cat` command.
+But in order to sort the files according to timestamp, `ls -lt` command is used and the contents of this command can be stored in a file using the __redirection(>) mechanism__ and the contents of the file can be viewed using `cat` command.
 ```
-$ ls | sort >  sample1
+$ ls -lt >  sample1
 $ cat sample1
 ```
 
-![Screenshot (693)](https://github.com/user-attachments/assets/a93835a0-af0a-4e13-95fd-681cb644ccab)
+![image](https://github.com/user-attachments/assets/a3b49980-f143-4d7d-80b8-2e81699c4c9b)
