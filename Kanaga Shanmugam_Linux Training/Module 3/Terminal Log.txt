@@ -1,0 +1,54 @@
+┌──(kali㉿kali)-[~]
+└─$ cd linux_training/module3
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ ls
+backup_manager.sh
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ vi backup_manager.sh
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ chmod 777 backup_manager.sh 
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ ls -l
+total 4
+-rwxrwxrwx 1 kali kali 3117 Jan 27 08:17 backup_manager.sh
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ ./backup_manager.sh ~/Downloads ~/linux_training/module3/backup .c
+Files that match the given extention are:
+/home/kali/Downloads/caesar.c         /home/kali/Downloads/exp10.c  /home/kali/Downloads/exp8.c  /home/kali/Downloads/lex.yy.c
+/home/kali/Downloads/codeinjection.c  /home/kali/Downloads/exp1.c   /home/kali/Downloads/exp9.c  /home/kali/Downloads/y.tab.c
+
+Files to be backed up:
+/home/kali/Downloads/caesar.c (1598 bytes)
+/home/kali/Downloads/codeinjection.c (2059 bytes)
+/home/kali/Downloads/exp10.c (1965 bytes)
+/home/kali/Downloads/exp1.c (4221 bytes)
+/home/kali/Downloads/exp8.c (2130 bytes)
+/home/kali/Downloads/exp9.c (2190 bytes)
+/home/kali/Downloads/lex.yy.c (44691 bytes)
+/home/kali/Downloads/y.tab.c (42144 bytes)
+Automation Script Successfully Completed and Report Log successfully saved
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ ls                          
+backup  backup_manager.sh
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3]
+└─$ cd backup                  
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3/backup]
+└─$ ls
+backup_report.log  caesar.c  codeinjection.c  exp10.c  exp1.c  exp8.c  exp9.c  lex.yy.c  y.tab.c
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/linux_training/module3/backup]
+└─$ cat backup_report.log
+
+Back Up Report : 
+Date of Backup : Mon Jan 27 08:18:29 AM EST 2025
+*************************************
+Total number of files processed : 8
+Total size of files processed : 100998
