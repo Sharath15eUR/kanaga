@@ -22,3 +22,52 @@ total 158736
                                                                                                                                                                                                                                            
 ┌──(kali㉿kali)-[~/linux_training/module4]
 └─$ ./filter_parameter.sh
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ cat input.txt | grep -c -w "frame.time"
+3225
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ cat input.txt | grep -c -w "wlan.fc.type"
+3225
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ cat input.txt | grep -c -w "wlan.fc.subtype"
+3225
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ wc -l output.txt 
+9675 output.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ head -30 output.txt                         
+"frame.time": "Dec 31, 2024 12:50:25.890970000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.892357000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.928606000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.983072000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.983586000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.993337000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.994324000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.030963000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.085310000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.085817000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
