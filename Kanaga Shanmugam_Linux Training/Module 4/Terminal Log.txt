@@ -1,0 +1,24 @@
+┌──(kali㉿kali)-[~]
+└─$ cd linux_training/module4
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ ls   
+filter_parameter.sh  input.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ chmod 744 input.txt     
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ chmod 744 filter_parameter.sh 
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ ls -l
+total 158736
+-rwxr--r-- 1 kali kali       328 Jan 29 02:27 filter_parameter.sh
+-rwxr--r-- 1 kali kali 162538952 Jan 29 02:06 input.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ vi filter_parameter.sh
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module4]
+└─$ ./filter_parameter.sh
