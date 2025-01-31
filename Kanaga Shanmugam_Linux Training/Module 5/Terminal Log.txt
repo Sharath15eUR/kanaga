@@ -1,0 +1,69 @@
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ vi file_analyzer.sh 
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ chmod 777 file_analyzer.sh
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ls
+file_analyzer.sh
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ./file_analyzer.sh -d ~/linux_training                                 
+Invalid format!!
+Try using --help option for more details
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ./file_analyzer.sh -d ~/linux_training -p File 
+Invalid format!!
+Try using --help option for more details
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ./file_analyzer.sh -d ~/linux_training -k File
+grep: /home/kali/linux_training/module1/file1: Permission denied
+File found in /home/kali/linux_training/module3/backup_manager.sh
+File found in /home/kali/linux_training/module5/file_analyzer.sh
+File found in /home/kali/linux_training/module5/output.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ls
+errors.log  file_analyzer.sh  output.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ cat errors.log            
+grep: /home/kali/linux_training/module5/output.txt: input file is also the output
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ cat output.txt 
+/home/kali/linux_training/module3/backup_manager.sh:19:echo "Files that match the given extention are:"
+/home/kali/linux_training/module3/backup_manager.sh:28:echo "Files to be backed up:"
+/home/kali/linux_training/module3/backup_manager.sh:57: #Backup File
+/home/kali/linux_training/module5/file_analyzer.sh:26:              #File Handling and Error Redirection. Redirecting errors related to file
+/home/kali/linux_training/module5/file_analyzer.sh:51:                  File to search directly
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ./file_analyzer.sh -f ~/linux_training -k File
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ cat errors.log                                
+grep: /home/kali/linux_training/module5/output.txt: input file is also the output
+grep: /home/kali/linux_training: Is a directory
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/linux_training/module5]
+└─$ ./file_analyzer.sh --help                     
+        NAME:
+                file_analyzer.sh
+        SYNOPSIS:
+                ./file_analyzer.sh [OPTION ...] FILE NAME [OPTION ...] PATTERN
+        DESCRIPTION:
+                This Shell Script recursively searches for an keyword either in a directory or a file according to the option chosen
+        OPTIONS:
+                -d,directory search
+                         Recursively searches all the contents of the directory and its subdirectories for the given keyword
+                -k,keyword
+                        Keyword to search
+                -f,file search
+                        File to search directly
+                --help
+                        Display the help menu.
+
