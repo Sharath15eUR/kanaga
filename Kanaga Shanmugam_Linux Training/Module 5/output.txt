@@ -1,0 +1,5 @@
+/home/kali/linux_training/module3/backup_manager.sh:19:echo "Files that match the given extention are:"
+/home/kali/linux_training/module3/backup_manager.sh:28:echo "Files to be backed up:"
+/home/kali/linux_training/module3/backup_manager.sh:57: #Backup File
+/home/kali/linux_training/module5/file_analyzer.sh:26:              #File Handling and Error Redirection. Redirecting errors related to file
+/home/kali/linux_training/module5/file_analyzer.sh:51:                  File to search directly
