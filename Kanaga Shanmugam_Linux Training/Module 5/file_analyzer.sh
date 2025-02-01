@@ -78,3 +78,46 @@ else
         echo "Try using --help option for more details"
         exit 1
 fi
+
+
+#Alternatively using getopts to process command line arguements
+while getopts "a:b:c:d:" opts;do
+        case "${opts}" in
+                a)
+
+                        if [ "${OPTARG}" = "-d" ] || [ "${OPTARG}" = "-f" ];then
+                                if [ $# -ne 8 ];then
+                                        echo "Invalid Format!!!!!"
+                                        echo "Try using --help for more details"
+                                        exit 1
+                                fi
+                                option=${OPTARG}
+                        elif [ "${OPTARG}" = "--help" ];then
+                                help
+                        else
+                                echo "Invalid Format!!"
+                                echo "Try using --help option for more details"
+                                exit 1
+                        fi;;
+                b)
+                        directory_to_search="${OPTARG}";;
+                c)
+                        if [ ! ${OPTARG}="-k" ];then
+                                echo "Invalid Format!!"
+                                echo "Try using --help for more details"
+                                exit 1
+                        fi;;
+                d)
+                        if [ ${OPTARG}="-k" ];then
+                                if ! echo "${OPTARG}" | grep -qE '^[a-zA-Z0-9]+$';then
+                                        echo "Invalid keyword : ${OPTARG}. Only non empty alphanumeric characters are allowed">>errors.log
+                                        exit 1
+                                else
+                                        word_to_search=${OPTARG}
+                                fi
+                        fi;;
+                *)
+                        echo "Invalid Format!! Use --help option for more details";;
+        esac
+done
+search $option $directory_to_search $word_to_search
