@@ -106,7 +106,7 @@ fi
 ```
 **COMMAND LINE ARGUMENTS USING GETOPTS:**
 
-Given below is the alternate code using `getopts` method that can replace the [above section of code](https://github.com/Sharath15eUR/kanaga/edit/main/Kanaga%20Shanmugam_Linux%20Training/Module%205/Module%205.md#regular-expression)
+Given below is the alternate code using `getopts` method that can replace the [above section of code](https://github.com/Sharath15eUR/kanaga/blob/main/Kanaga%20Shanmugam_Linux%20Training/Module%205/Module%205.md#regular-expression)
 
 Using getopts, the command line arguements are processed. According to the given specifications, there are atmost 4 parameters passed to the file so the getopts
 takes 4 parameters in the order of "a:b:c:d" and using case statement, the arguements are processed and variables are assigned after all possible errors are handled.
