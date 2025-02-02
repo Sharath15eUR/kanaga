@@ -25,13 +25,10 @@ ERROR: DEBUG - Unexpected server response received.
 
                                                                                                                                                                                                                                            
 ┌──(kali㉿kali)-[~/linux_training/module2]
-└─$ cat log.txt | grep -i "ERROR" > filtered_log.txt 
+└─$ cat log.txt | grep -i "ERROR" | grep -vi "debug" > filtered_log.txt 
                                                                                                                                                                                                                                            
 ┌──(kali㉿kali)-[~/linux_training/module2]
 └─$ cat filtered_log.txt                            
 ERROR: Unable to connect to the database.
-ERROR: DEBUG - Configuration settings could not be applied.
 ERROR: Failed to fetch data from API endpoint '/users'.
-ERROR: DEBUG - Query execution failed due to a syntax error.
 ERROR: Missing required parameter in the request.
-ERROR: DEBUG - Unexpected server response received.
