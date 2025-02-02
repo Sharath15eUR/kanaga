@@ -27,7 +27,7 @@ $ cat updated_config.txt
 ### Q3. Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named filtered_log.txt.
 In order to search for a string in the entire file, `grep` command can be used. To ignore case sensitivity, -i option is included in the grep command and the resulting output is redirected to filtered_log.txt which can be viewed using `cat` command
 ```
-$ cat log.txt | grep -i "ERROR" > filtered_log.txt 
+$ cat log.txt | grep -i "ERROR" | grep -vi "debug" > filtered_log.txt 
 ```
 ![Screenshot (697)](https://github.com/user-attachments/assets/1eb69550-cc9d-473b-8677-693b0455bc30)
 
