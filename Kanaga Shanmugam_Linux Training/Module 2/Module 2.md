@@ -38,6 +38,11 @@ $ top
 $ kill 21582
 $ top
 ```
+
+Alternatively,the below code can be used to identify and kill the most memory consuming process
+```
+pid=$(ps aux --sort=-%mem | awk 'NR==2 {print $2}') && kill $pid
+```
 ![Screenshot (698)](https://github.com/user-attachments/assets/289d293a-8ff4-46e0-b6dc-b129bb6f5f8f)
 ![Screenshot (699)](https://github.com/user-attachments/assets/5429ea1d-63c3-44ef-8d76-c549cb17ced8)
 
