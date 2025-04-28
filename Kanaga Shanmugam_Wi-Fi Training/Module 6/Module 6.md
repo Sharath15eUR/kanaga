@@ -72,7 +72,6 @@ After generating the PTK it compares with the message it received by looking at 
 
 Hence the connection is teared down and authentication fails at Second Handshake.
 
-
 ### Q9. What problem does 802.1X solve in a network?
 802.1X solves the problem of unauthorized network access by providing centralized authentication network by using RADIUS server for authentication and taking away authentication overhead from the Access Points. This enhances network security, supports flexible access control for different users (including guests), and protects sensitive data through encrypted authentication processes. It is especially important for large networks like Enterprise Networks.
 
