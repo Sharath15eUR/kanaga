@@ -1,0 +1,22 @@
+Time taken for execution without threads :
+
+┌──(kali㉿kali)-[~/embedur_training/advance_c/module2]
+└─$ { time ./signals 1> /dev/null; } 2>&1
+5
+
+real    204.46s
+user    0.01s
+sys     0.00s
+cpu     0%
+
+Time taken for execution with threads :
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/embedur_training/advance_c/module2]
+└─$ { time ./threads 1> /dev/null; } 2>&1 
+5
+
+real    104.74s
+user    0.00s
+sys     0.02s
+cpu     0%
+
